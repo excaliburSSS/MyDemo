@@ -11,7 +11,7 @@ import java.util.Scanner;
 public class CodeGenerator {
 
     public static void  run(String table){
-        FastAutoGenerator.create("jdbc:mysql://localhost:3306/myproject", "root", "43439494")
+        FastAutoGenerator.create("jdbc:mysql://localhost:3306/myprojectx", "root", "43439494")
                 .globalConfig(builder -> {
                     builder.author("yxz")
                             .enableSwagger()
@@ -25,7 +25,7 @@ public class CodeGenerator {
                             .controller("controller")
                             .mapper("mapper")
                             .xml("mapper")
-                            .pathInfo(Collections.singletonMap(OutputFile.xml,System.getProperty("user.dir")+"\\src\\main\\java"))
+//                            .pathInfo(Collections.singletonMap(OutputFile.xml,System.getProperty("user.dir")+"\\src\\main\\java"))
                     ;
                 })
                 .strategyConfig(builder -> {
@@ -40,7 +40,7 @@ public class CodeGenerator {
 
 
     public static void main(String[] args) {
-        String table="User";
+        String table="user";
         run(table);
     }
 
